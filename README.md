@@ -1,6 +1,6 @@
-# A la vanguardia con la IA
+# La IA por dentro
 
-Landing del ebook *A la vanguardia con la IA*. Sitio estático (HTML, CSS y JS) publicado con GitHub Pages.
+Landing del ebook *La IA por dentro*. Sitio estático (HTML, CSS y JS) publicado con GitHub Pages.
 
 - `index.html`: la página
 - `css/styles.css`: estilos
