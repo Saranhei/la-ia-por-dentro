@@ -224,19 +224,20 @@ p { margin: 0; }
 .edition b { color: var(--pink); }
 
 .polas { position: relative; height: 480px; }
-.pola { position: absolute; width: 210px; }
-.pola:nth-child(1) { left: 0; top: 24px; }
-.pola:nth-child(2) { right: 0; top: 0; }
-.pola:nth-child(3) { left: 26%; top: 238px; }
+.pola { margin: 0; }
+.polas .pola { position: absolute; width: 210px; }
+.polas .pola:nth-child(1) { left: 0; top: 24px; }
+.polas .pola:nth-child(2) { right: 0; top: 0; }
+.polas .pola:nth-child(3) { left: 26%; top: 238px; }
 .pola-card {
   background: var(--white);
   padding: 12px 12px 6px;
   box-shadow: 0 16px 28px -14px var(--shadow);
   transform: rotate(var(--r, 0deg));
 }
-.pola:nth-child(1) .pola-card { --r: -7deg; }
-.pola:nth-child(2) .pola-card { --r: 5deg; }
-.pola:nth-child(3) .pola-card { --r: -2deg; }
+.polas .pola:nth-child(1) .pola-card { --r: -7deg; }
+.polas .pola:nth-child(2) .pola-card { --r: 5deg; }
+.polas .pola:nth-child(3) .pola-card { --r: -2deg; }
 .pola svg { display: block; width: 100%; height: auto; }
 .pola figcaption {
   font-family: var(--f-hand);
@@ -247,9 +248,9 @@ p { margin: 0; }
 @media (max-width: 860px) {
   .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; }
   .polas { height: auto; display: flex; justify-content: center; gap: 6px; }
-  .pola { position: static; width: 32%; max-width: 190px; }
-  .pola figcaption { font-size: 1.35rem; }
-  .pola-card { padding: 8px 8px 4px; }
+  .polas .pola { position: static; width: 32%; max-width: 190px; }
+  .polas .pola figcaption { font-size: clamp(1.05rem, 4.2vw, 1.35rem); line-height: 1.25; padding-block: 4px 2px; white-space: nowrap; }
+  .polas .pola-card { padding: 7px 7px 4px; }
 }
 @media (max-width: 560px) {
   .hero { padding-block: 40px 48px; }
