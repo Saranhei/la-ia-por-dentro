@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>A la vanguardia con la IA</title>
+<meta name="description" content="Un cuaderno para entender desde cero cómo piensan los modelos, qué es el contexto y cómo se arman prompts, skills, agentes, arneses y loops.">
+<meta name="theme-color" content="#D5C19C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="A la vanguardia con la IA">
+<meta property="og:description" content="Un cuaderno para entender desde cero cómo piensan los modelos, qué es el contexto y cómo se arman prompts, skills, agentes, arneses y loops.">
+<meta property="og:url" content="https://saranhei.github.io/a-la-vanguardia-con-la-ia/">
+<meta property="og:image" content="https://saranhei.github.io/a-la-vanguardia-con-la-ia/img/p01.jpg">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=JetBrains+Mono:wght@400;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Shantell+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<div class="page">
+
+<nav class="tabs" aria-label="Secciones">
+  <a href="#inicio" data-c="teal">inicio</a>
+  <a href="#para-quien" data-c="pink">para quién</a>
+  <a href="#mapa" data-c="blue">el mapa</a>
+  <a href="#bucle" data-c="purple">el bucle</a>
+  <a href="#la-miga" data-c="mustard">La Miga</a>
+  <a href="#indice" data-c="green">índice</a>
+  <a href="#comprar" data-c="ink">comprar</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="paper hero-card">
+        <i class="tape"></i><i class="tape dots"></i>
+        <p class="eyebrow">Lo que aprendí tras años de experiencia</p>
+        <h1>A la vanguardia<br>con la IA</h1>
+        <p class="lead">Cómo piensan los modelos, qué es el contexto, cómo se arman prompts, skills, agentes y arneses, y por qué todo el mundo habla de loops. Explicado desde cero, con ejemplos que podés copiar.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#comprar">Quiero el cuaderno</a>
+          <a class="link" href="#mapa">Ver qué hay adentro</a>
+        </div>
+        <p class="hero-facts"><span>71 páginas</span><span>13 capítulos</span><span>PDF</span></p>
+      </div>
+      <p class="edition">Edición octubre 2026 <b>✦</b> de cero a tu propio agente</p>
+    </div>
+
+    <div class="polas" aria-hidden="true">
+      <figure class="pola"><div class="pola-card">
+        <svg viewBox="0 0 160 160"><rect width="160" height="160" fill="#DCEDEA"/>
+          <g stroke="#26304A" stroke-width="4" stroke-linecap="round">
+            <path d="M62 34v16M80 34v16M98 34v16M62 110v16M80 110v16M98 110v16M34 62h16M34 80h16M34 98h16M110 62h16M110 80h16M110 98h16"/>
+          </g>
+          <rect x="50" y="50" width="60" height="60" rx="11" fill="#FFFFFF" stroke="#26304A" stroke-width="4"/>
+          <g fill="#E3B24E"><ellipse cx="80" cy="86" rx="17" ry="11"/><circle cx="72" cy="78" r="8"/><circle cx="88" cy="78" r="8"/></g>
+        </svg>
+        <figcaption>el modelo</figcaption>
+      </div></figure>
+      <figure class="pola"><div class="pola-card">
+        <svg viewBox="0 0 160 160"><rect width="160" height="160" fill="#F6DDE0"/>
+          <circle cx="80" cy="80" r="44" fill="none" stroke="#26304A" stroke-width="3" stroke-dasharray="7 6"/>
+          <path d="M-7 -7 L8 0 L-7 7Z" fill="#26304A" transform="translate(111 49) rotate(45)"/>
+          <circle cx="80" cy="36" r="8" fill="#C2606F"/><circle cx="124" cy="80" r="8" fill="#E3B24E"/>
+          <circle cx="80" cy="124" r="8" fill="#3E8A80"/><circle cx="36" cy="80" r="8" fill="#7A68B4"/>
+        </svg>
+        <figcaption>el bucle</figcaption>
+      </div></figure>
+      <figure class="pola"><div class="pola-card">
+        <svg viewBox="0 0 160 160"><rect width="160" height="160" fill="#E8E2F5"/>
+          <circle cx="80" cy="80" r="44" fill="none" stroke="#7A68B4" stroke-width="3"/>
+          <circle cx="80" cy="80" r="16" fill="#26304A"/>
+          <g fill="#FFFFFF" stroke="#26304A" stroke-width="2.5">
+            <rect x="69" y="29" width="22" height="14" rx="3"/><rect x="113" y="73" width="22" height="14" rx="3"/>
+            <rect x="69" y="117" width="22" height="14" rx="3"/><rect x="25" y="73" width="22" height="14" rx="3"/>
+          </g>
+        </svg>
+        <figcaption>el arnés</figcaption>
+      </div></figure>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ PARA QUIÉN ============ -->
+<section id="para-quien">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Antes de empezar</p>
+      <h2>Para quién es</h2>
+      <p class="lead">Lo escribí como desarrolladora, pensando en alguien que nunca programó y quiere entender de verdad qué pasa adentro de Claude, ChatGPT o Gemini. La idea no es memorizar términos, sino poder usarlos.</p>
+    </div>
+    <div class="postits">
+      <p class="postit">Personas que usan IA todos los días y quieren <b>dejar de probar suerte</b>.</p>
+      <p class="postit">Emprendedores que quieren <b>automatizar partes de su negocio</b>.</p>
+      <p class="postit">Curiosos que escuchan <b>agentes, RAG o harness</b> y no saben qué son.</p>
+      <p class="postit">Devs que necesitan una forma clara de <b>explicárselo a su equipo</b> o a sus clientes.</p>
+    </div>
+
+    <div class="paper no-need">
+      <i class="tape"></i>
+      <h3>Qué no necesitás</h3>
+      <ul>
+        <li><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M5 6 L21 20 M20 5 L6 21" stroke="#C2606F" stroke-width="3.2" stroke-linecap="round" fill="none"/></svg>
+          <p><strong>Saber programar.</strong> Cuando aparece algo técnico, una nota te avisa que no hace falta entenderlo para seguir.</p></li>
+        <li><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M5 6 L21 20 M20 5 L6 21" stroke="#C2606F" stroke-width="3.2" stroke-linecap="round" fill="none"/></svg>
+          <p><strong>Matemática.</strong> Los conceptos se explican con dibujos y analogías.</p></li>
+        <li><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M5 6 L21 20 M20 5 L6 21" stroke="#C2606F" stroke-width="3.2" stroke-linecap="round" fill="none"/></svg>
+          <p><strong>Pagar herramientas para entender el libro.</strong> Algunas prácticas sí usan herramientas pagas, y te lo aviso.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EL MAPA ============ -->
+<section class="mapa" id="mapa">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">El recorrido completo</p>
+      <h2>Cada capa usa las de adentro</h2>
+      <p class="lead">El cuaderno va de lo más simple a lo más poderoso, y cada capítulo usa lo que viste en el anterior. Bajá y armalo capa por capa.</p>
+    </div>
+  </div>
+
+  <div class="mapa-stage">
+    <div class="mapa-words" aria-hidden="true">
+      <span class="mapa-word">modelo</span>
+      <span class="mapa-word">contexto</span>
+      <span class="mapa-word">agente</span>
+      <span class="mapa-word">arnés</span>
+      <span class="mapa-word">loop</span>
+    </div>
+    <div class="wrap mapa-grid">
+      <div class="paper mapa-card">
+        <i class="tape"></i>
+        <svg viewBox="0 0 600 600" role="img" aria-label="Cinco círculos concéntricos: modelo en el centro, después contexto, agente, arnés y loop">
+          <g class="ring r-loop" data-i="4"><circle cx="300" cy="300" r="292"/><text x="300" y="38">LOOP</text></g>
+          <g class="ring r-arnes" data-i="3"><circle cx="300" cy="300" r="236"/><text x="300" y="94">ARNÉS</text></g>
+          <g class="ring r-agente" data-i="2"><circle cx="300" cy="300" r="178"/><text x="300" y="152">AGENTE</text></g>
+          <g class="ring r-contexto" data-i="1"><circle cx="300" cy="300" r="120"/><text x="300" y="210">CONTEXTO</text></g>
+          <g class="ring r-modelo" data-i="0"><circle cx="300" cy="300" r="62"/><text x="300" y="309">modelo</text></g>
+        </svg>
+        <p class="extra">+ artifacts: lo que todo esto te devuelve</p>
+      </div>
+
+      <div>
+        <div class="mapa-caps">
+          <article class="mapa-cap" data-c="ink">
+            <p class="eyebrow">Caps. 01 y 02 · Entender la máquina</p>
+            <h3>El modelo</h3>
+            <p>Qué es la IA, qué es un LLM y cómo predice palabra por palabra. Tokens, entrenamiento y razonamiento, explicados con perillas y tortas en vez de fórmulas.</p>
+            <div class="chips"><span>tokens</span><span>predicción</span><span>entrenamiento</span><span>razonamiento</span></div>
+          </article>
+          <article class="mapa-cap" data-c="blue">
+            <p class="eyebrow">Caps. 03 a 06 · Hablarle bien</p>
+            <h3>El contexto</h3>
+            <p>Todo lo que el modelo ve en un momento dado. Cómo armar un buen pedido, ordenar tu información en un proyecto y hacer que encuentre el dato correcto con RAG.</p>
+            <div class="chips"><span>prompt</span><span>proyecto</span><span>RAG</span><span>memoria</span></div>
+            <p class="note">¿Respuestas genéricas? Revisá el contexto.</p>
+          </article>
+          <article class="mapa-cap" data-c="green">
+            <p class="eyebrow">Caps. 08 a 10 · Hacer que actúe</p>
+            <h3>El agente</h3>
+            <p>Un modelo que decide en un bucle qué herramienta usar hasta cumplir un objetivo. Cómo se crea uno en tres niveles, qué es MCP y cómo enseñarle un oficio con skills.</p>
+            <div class="chips"><span>tools</span><span>MCP</span><span>subagentes</span><span>skills</span><span>plugins</span></div>
+            <p class="note">¿Hacés todo a mano? Pensá en un agente.</p>
+          </article>
+          <article class="mapa-cap" data-c="mustard-ink">
+            <p class="eyebrow">Cap. 11 · Harness engineering</p>
+            <h3>El arnés</h3>
+            <p>Todo lo que rodea al modelo para que puedas confiarle algo real: instrucciones, permisos, controles y memoria. Con hooks y permisos de ejemplo para copiar.</p>
+            <div class="chips"><span>permisos</span><span>hooks</span><span>verificación</span><span>registro</span></div>
+            <p class="note">¿El agente se equivoca? Mirá el arnés.</p>
+          </article>
+          <article class="mapa-cap" data-c="purple">
+            <p class="eyebrow">Cap. 12 · Loop engineering</p>
+            <h3>El loop</h3>
+            <p>En vez de pedirle cada paso, le diseñás el circuito: una meta, qué lo dispara, cuándo corta y cuánto puede gastar. Y los riesgos de dejarlo andar sin mirar.</p>
+            <div class="chips"><span>meta</span><span>disparador</span><span>corte</span><span>presupuesto</span></div>
+          </article>
+        </div>
+        <div class="mapa-progress" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EL BUCLE ============ -->
+<section id="bucle">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Capítulo 08 · Agentes</p>
+      <h2>El chat te dice cómo. El agente lo hace.</h2>
+      <p class="lead">Mili, la dueña de La Miga, hace la misma pregunta dos veces. Bajá para ver al agente dar vueltas por el bucle hasta tener la respuesta.</p>
+    </div>
+  </div>
+  <div class="bucle-stage">
+    <div class="wrap bucle-grid">
+      <div class="bucle-svg">
+        <svg viewBox="0 0 600 600" role="img" aria-label="El bucle agéntico: entender la meta, elegir acción, usar herramienta, ver resultado, y volver a empezar si no terminó">
+          <circle class="loop-track" cx="300" cy="300" r="190"/>
+          <path class="loop-arrow" d="M-7 -8 L9 0 L-7 8Z" transform="translate(434.35 165.65) rotate(45)"/>
+          <path class="loop-arrow" d="M-7 -8 L9 0 L-7 8Z" transform="translate(434.35 434.35) rotate(135)"/>
+          <path class="loop-arrow" d="M-7 -8 L9 0 L-7 8Z" transform="translate(165.65 434.35) rotate(225)"/>
+          <path class="loop-arrow" d="M-7 -8 L9 0 L-7 8Z" transform="translate(165.65 165.65) rotate(315)"/>
+          <circle id="dot" cx="300" cy="110" r="11"/>
+          <g class="loop-core">
+            <circle cx="300" cy="300" r="84"/>
+            <text x="300" y="298" font-size="24" font-weight="700">Modelo</text>
+            <text x="300" y="324" font-size="15">razona y decide</text>
+          </g>
+          <g class="pill"><rect x="200" y="87" width="200" height="46" rx="18" fill="#FBEFCB"/><text x="300" y="116">1. Entender la meta</text></g>
+          <g class="pill"><rect x="408" y="277" width="164" height="46" rx="18" fill="#F7D9DD"/><text x="490" y="306">2. Elegir acción</text></g>
+          <g class="pill"><rect x="196" y="467" width="208" height="46" rx="18" fill="#DDEFE6"/><text x="300" y="496">3. Usar herramienta</text></g>
+          <g class="pill"><rect x="26" y="277" width="168" height="46" rx="18" fill="#E8E2F5"/><text x="110" y="306">4. Ver resultado</text></g>
+          <text class="loop-done" x="452" y="452" transform="rotate(-8 452 452)">¿terminé?</text>
+          <text class="loop-done" x="460" y="478" transform="rotate(-8 460 478)">si no, otra</text>
+        </svg>
+      </div>
+
+      <div class="convo">
+        <p class="bubble mili"><small>Mili</small>¿Alcanza la harina para mañana?</p>
+        <div class="paper side-card chat-card">
+          <p class="who">Chat <span>te dice cómo</span></p>
+          <p>Para saberlo necesito el stock actual y los pedidos de mañana. ¿Me pasás esos datos?</p>
+        </div>
+        <div class="paper side-card">
+          <p class="who">Agente <span>lo hace</span></p>
+          <ol class="log">
+            <li class="log-item"><span class="tag">meta</span><span>Saber si alcanza la harina para los pedidos de mañana.</span></li>
+            <li class="log-item"><span class="tag">acción</span><span>Revisar el stock.</span></li>
+            <li class="log-item"><span class="tag">herramienta</span><span><code>planilla_stock</code> → harina: 38 kg</span></li>
+            <li class="log-item"><span class="tag">resultado</span><span>Hay 38 kg. ¿Terminé? No, falta saber cuánto se necesita.</span></li>
+            <li class="log-item"><span class="tag">acción</span><span>Revisar los pedidos de mañana.</span></li>
+            <li class="log-item"><span class="tag">herramienta</span><span><code>pedidos_mañana</code> → 50 kg de harina</span></li>
+            <li class="log-item"><span class="tag">resultado</span><span>50 − 38 = 12. ¿Terminé? Sí.</span></li>
+          </ol>
+          <p class="bubble answer"><small>Agente</small>No alcanza, faltan 12 kg. ¿Armo el pedido al proveedor?</p>
+        </div>
+        <p class="formula">Agente = modelo + herramientas + bucle + objetivo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA MIGA ============ -->
+<section id="la-miga">
+  <div class="wrap miga-grid">
+    <div class="miga-intro">
+      <div class="sec-head">
+        <p class="eyebrow">El hilo del libro</p>
+        <h2>Un solo caso, de punta a punta</h2>
+        <p class="lead">La Miga es una panadería de barrio inventada: dos locales, unos cuarenta productos, pedidos por WhatsApp, una planilla de stock y una dueña, Mili, que no tiene tiempo para nada. Si lo entendés con medialunas, lo entendés con lo que sea.</p>
+      </div>
+      <figure class="pola miga-pola" aria-hidden="true"><div class="pola-card">
+        <svg viewBox="0 0 220 180">
+          <rect width="220" height="180" fill="#FBF8F1"/>
+          <ellipse cx="110" cy="170" rx="96" ry="6" fill="#E6D9BF"/>
+          <rect x="42" y="80" width="136" height="88" fill="#F3E6CF" stroke="#B89A6A" stroke-width="2"/>
+          <path d="M22 82 L110 28 L198 82 Z" fill="#E7A1AC" stroke="#C2606F" stroke-width="2" stroke-linejoin="round"/>
+          <g fill="#E7A1AC"><circle cx="36" cy="84" r="7"/><circle cx="52" cy="84" r="7"/><circle cx="68" cy="84" r="7"/><circle cx="84" cy="84" r="7"/><circle cx="100" cy="84" r="7"/><circle cx="116" cy="84" r="7"/><circle cx="132" cy="84" r="7"/><circle cx="148" cy="84" r="7"/><circle cx="164" cy="84" r="7"/><circle cx="180" cy="84" r="7"/></g>
+          <text x="110" y="70" text-anchor="middle" font-family="Caveat, cursive" font-weight="700" font-size="26" fill="#26304A">La Miga</text>
+          <rect x="56" y="100" width="34" height="28" fill="#DDE9F6" stroke="#5A86B8" stroke-width="2"/>
+          <rect x="130" y="100" width="34" height="28" fill="#DDE9F6" stroke="#5A86B8" stroke-width="2"/>
+          <rect x="95" y="120" width="30" height="48" fill="#8A6A45"/>
+          <ellipse cx="40" cy="166" rx="16" ry="7" fill="#E3B24E"/><ellipse cx="180" cy="166" rx="16" ry="7" fill="#E3B24E"/>
+        </svg>
+        <figcaption>panadería ficticia, problemas reales</figcaption>
+      </div></figure>
+    </div>
+
+    <div class="miga-track">
+    <span class="miga-line" aria-hidden="true"><span></span></span>
+    <ol class="miga-steps">
+      <li data-n="1" data-c="pink"><h3>Aprender a pedirle bien las cosas.</h3><span class="cap">capítulo 4</span></li>
+      <li data-n="2" data-c="mustard"><h3>Darle un proyecto con el catálogo y las reglas del negocio.</h3><span class="cap">capítulo 5</span></li>
+      <li data-n="3" data-c="green"><h3>Que busque en cientos de recetas y pedidos viejos con RAG.</h3><span class="cap">capítulo 6</span></li>
+      <li data-n="4" data-c="teal"><h3>Que genere artifacts: la carta, una planilla de costos, un tablero.</h3><span class="cap">capítulo 7</span></li>
+      <li data-n="5" data-c="blue"><h3>Convertirlo en un agente que consulta stock y arma pedidos.</h3><span class="cap">capítulo 8</span></li>
+      <li data-n="6" data-c="purple"><h3>Enseñarle skills, como armar la carta semanal.</h3><span class="cap">capítulo 9</span></li>
+      <li data-n="7" data-c="mustard"><h3>Rodearlo de un arnés para que no haga macanas.</h3><span class="cap">capítulo 11</span></li>
+      <li data-n="8" data-c="green"><h3>Ponerlo en un loop que revise el stock todas las mañanas.</h3><span class="cap">capítulo 12</span></li>
+    </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PÁGINAS ============ -->
+<section id="paginas">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Por dentro</p>
+      <h2>Así se ven las páginas</h2>
+      <p class="lead">Un cuaderno, no un manual. Cada concepto tiene su dibujo, y cada recurso visual cumple siempre la misma función.</p>
+    </div>
+    <div class="sheets-scroll">
+      <div class="sheets">
+        <figure class="sheet">
+          <i class="tape"></i>
+          <img src="img/p07.jpg" width="1000" height="1417" alt="Página del capítulo 1: las muñecas rusas de IA, machine learning, deep learning y LLM, con una línea de tiempo de 1956 a 2026" loading="lazy">
+          <figcaption>Las muñecas rusas<span>capítulo 01 · ¿Qué es la IA?</span></figcaption>
+        </figure>
+        <figure class="sheet">
+          <i class="tape"></i>
+          <img src="img/p33.jpg" width="1000" height="1417" alt="Página del capítulo 8: el bucle agéntico en cuatro pasos y la diferencia entre un chat y un agente" loading="lazy">
+          <figcaption>Del chat al agente<span>capítulo 08 · Agentes</span></figcaption>
+        </figure>
+        <figure class="sheet">
+          <i class="tape"></i>
+          <img src="img/p67.jpg" width="1000" height="1417" alt="Página final: el mapa de todo lo aprendido, con modelo, contexto, agente, arnés y loop como círculos concéntricos" loading="lazy">
+          <figcaption>El mapa de todo lo aprendido<span>para llevar</span></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="kit">
+      <div>
+        <div class="k-def"><b>Definición</b>El concepto dicho en pocas líneas.</div>
+        <p class="what">Si solo leés estas tarjetas, igual te llevás el esqueleto del libro.</p>
+      </div>
+      <div>
+        <div class="k-post">Trucos, analogías y cosas que me costaron en el laburo.</div>
+        <p class="what">Post-its con mis comentarios al margen.</p>
+      </div>
+      <div>
+        <div class="k-case"><b>Caso: La Miga</b>El asistente de la panadería, un paso más en cada capítulo.</div>
+        <p class="what">El ejemplo que atraviesa todo el libro.</p>
+      </div>
+      <div>
+        <div class="k-file"><span>archivo.md</span># Código o archivos de ejemplo<br>Los podés copiar tal cual.</div>
+        <p class="what">Archivos listos para pegar en tu proyecto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÍNDICE ============ -->
+<section id="indice">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Índice</p>
+      <h2>Trece capítulos, tres partes</h2>
+      <p class="lead">Leé un capítulo por vez y probá lo que dice antes de pasar al siguiente. Se aprende usándolo.</p>
+    </div>
+    <div class="paper index">
+      <i class="tape"></i>
+      <div class="part">
+        <h3>Parte 1 · Entender la máquina</h3>
+        <ol>
+          <li><span class="n" data-c="teal">01</span><span class="t"><b>¿Qué es la IA?</b> <span>Del machine learning a los modelos de lenguaje</span></span><span class="lead-dots"></span><span class="pg">5</span></li>
+          <li><span class="n" data-c="blue">02</span><span class="t"><b>Cómo piensa un LLM.</b> <span>Tokens, predicción, entrenamiento y razonamiento</span></span><span class="lead-dots"></span><span class="pg">9</span></li>
+          <li><span class="n" data-c="purple">03</span><span class="t"><b>Contexto y memoria.</b> <span>El escritorio del modelo y lo que se lleva a casa</span></span><span class="lead-dots"></span><span class="pg">13</span></li>
+        </ol>
+      </div>
+      <div class="part">
+        <h3>Parte 2 · Hablarle bien</h3>
+        <ol>
+          <li><span class="n" data-c="pink">04</span><span class="t"><b>El arte del prompt.</b> <span>Anatomía de un buen pedido, con antes y después</span></span><span class="lead-dots"></span><span class="pg">16</span></li>
+          <li><span class="n" data-c="mustard">05</span><span class="t"><b>Proyectos y cuadernos.</b> <span>Claude Projects, Gemini Notebooks y NotebookLM</span></span><span class="lead-dots"></span><span class="pg">20</span></li>
+          <li><span class="n" data-c="green">06</span><span class="t"><b>Embeddings y RAG.</b> <span>Cómo la IA encuentra la información correcta</span></span><span class="lead-dots"></span><span class="pg">23</span></li>
+          <li><span class="n" data-c="teal">07</span><span class="t"><b>Artifacts.</b> <span>Cuando la respuesta se vuelve un documento, una app o un tablero</span></span><span class="lead-dots"></span><span class="pg">29</span></li>
+        </ol>
+      </div>
+      <div class="part">
+        <h3>Parte 3 · Hacer que actúe</h3>
+        <ol>
+          <li><span class="n" data-c="blue">08</span><span class="t"><b>Agentes.</b> <span>El bucle que piensa, actúa y revisa. Cómo se crea uno</span></span><span class="lead-dots"></span><span class="pg">32</span></li>
+          <li><span class="n" data-c="purple">09</span><span class="t"><b>Skills y plugins.</b> <span>Enseñarle un oficio a la IA y empaquetarlo</span></span><span class="lead-dots"></span><span class="pg">41</span></li>
+          <li><span class="n" data-c="pink">10</span><span class="t"><b>CLAUDE.md y AGENTS.md.</b> <span>El manual de bienvenida del agente</span></span><span class="lead-dots"></span><span class="pg">51</span></li>
+          <li><span class="n" data-c="mustard">11</span><span class="t"><b>Harness engineering.</b> <span>Construir el arnés que lo vuelve confiable</span></span><span class="lead-dots"></span><span class="pg">55</span></li>
+          <li><span class="n" data-c="green">12</span><span class="t"><b>Loop engineering.</b> <span>Agentes que trabajan solos hasta cumplir una meta</span></span><span class="lead-dots"></span><span class="pg">60</span></li>
+          <li><span class="n" data-c="teal">13</span><span class="t"><b>Claude Code en la práctica.</b> <span>Comandos, atajos y flujo de trabajo</span></span><span class="lead-dots"></span><span class="pg">63</span></li>
+        </ol>
+      </div>
+      <div class="part">
+        <h3>Para llevar</h3>
+        <ol>
+          <li><span class="n" data-c="ink">✦</span><span class="t"><b>Mapa de todo lo aprendido.</b> <span>Glosario de bolsillo, páginas de notas y la plantilla Mi primer agente</span></span><span class="lead-dots"></span><span class="pg">67</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPRA ============ -->
+<section id="comprar">
+  <div class="wrap buy">
+    <figure class="cover">
+      <i class="tape"></i>
+      <img src="img/p01.jpg" width="1000" height="1417" alt="Tapa del cuaderno A la vanguardia con la IA, con tres polaroids: el modelo, el bucle y el arnés" loading="lazy">
+    </figure>
+    <div class="paper buy-card">
+      <i class="tape"></i>
+      <p class="eyebrow">Edición octubre 2026</p>
+      <h2>De cero a tu propio agente</h2>
+      <ul class="buy-list">
+        <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 12 L9 17 L19 5" stroke="#4E8A5D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>71 páginas en PDF, para leer en la compu, la tablet o impreso.</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 12 L9 17 L19 5" stroke="#4E8A5D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>13 capítulos en tres partes, de qué es un LLM a un agente funcionando en un loop.</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 12 L9 17 L19 5" stroke="#4E8A5D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Prompts, skills, hooks y archivos de ejemplo que podés copiar tal cual.</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 12 L9 17 L19 5" stroke="#4E8A5D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Glosario de bolsillo y una plantilla para diseñar tu primer agente.</span></li>
+      </ul>
+      <div class="hero-actions">
+        <a class="btn" href="#comprar" id="buy-link">Comprar el cuaderno</a>
+      </div>
+      <p class="fine">Todo el contenido fue revisado contra la documentación oficial en octubre de 2026. Los conceptos van a seguir valiendo por años; los nombres de comandos y botones pueden cambiar.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Claude, ChatGPT, Gemini, NotebookLM y demás son marcas de sus respectivos dueños. Este cuaderno es independiente y no está afiliado a ninguna de esas empresas.</p>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
